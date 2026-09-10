@@ -43,3 +43,11 @@ datacube_yearly <- p$aggregate_temporal_period(
 #create result and job
 result <- p$save_result(data = datacube_yearly, format = "GTiff")
 job <- create_job(con = con, graph = result, title = "NDVI_moehnesee_yearly")
+start_job(con, job = job)
+job_info <- describe_job(con, job = "j-2609100831134701b43fc0d706bce1a3")
+as(job_info, "Process")
+
+#save results
+dir.create("data/sentinel2", showWarnings = FALSE)
+download_results(con, job = "j-2609100831134701b43fc0d706bce1a3", folder = "data/sentinel2")
+

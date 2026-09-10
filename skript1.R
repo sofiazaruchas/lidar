@@ -3,7 +3,7 @@ library(lidR)
 library(terra)
 library(sf)
 
-#load pointcloud
+#load point cloud
 als_dir <- "C:/Users/Sofia Zaruchas/OneDrive/Desktop/EAGLE/lidar/exam/data/als"
 ctg <- readLAScatalog(als_dir)
 
@@ -23,5 +23,7 @@ las_check(las)
 ctg_norm <- normalize_height(ctg, algorithm = knnidw())
 
 list.files("data/als_normalized")
+
+ctg_norm2 <- readLAScatalog("data/als_normalized")
 
 
