@@ -28,6 +28,7 @@ ctg_norm2 <- readLAScatalog("data/als_normalized", filter = "-drop_z_above 60 -d
 
 #calculation of metrics
 metrics <- pixel_metrics(ctg_norm2, func = .stdmetrics_z, res = 10)
+
 print(metrics)
 
 #visualisation of metrics
@@ -42,5 +43,19 @@ chm <- rasterize_canopy(
   algorithm = pitfree(thresholds = c(0, 2, 5, 10, 15), max_edge = c(0, 1.5))
 )
 
+
 print(chm)
 plot(chm, col = height.colors(50))
+
+#smoothing of canopy height model
+ker <- matrix(1, 3, 3)
+chm_smooth <- terra::focal(chm, w = ker, fun = mean, na.rm = TRUE)
+
+plot(chm_smooth, col = height.colors(50))
+
+#save results
+dir.create("results", showWarnings = FALSE)
+
+writeRaster(chm, "results/chm_moehnesee.tif", overwrite = TRUE)
+writeRaster(metrics, "results/aba_metrics_moehnesee.tif", overwrite = TRUE)
+writeRaster(chm_smooth, "results/chm_smoothed_moehnesee.tif", overwrite = TRUE)
