@@ -99,11 +99,11 @@ All scripts are in `code/`:
 
 ![NDVI change map 2017-2024](results/ndvi_change_map.png)
 
-*Classified NDVI change map 2017–2024.*
+*Classified NDVI change map 2017–2024*
 
 ![Validated disturbance map](results/validated_disturbance_map.png)
 
-*Combined, validated disturbance map (NDVI + CHM).*
+*Combined, validated disturbance map (NDVI + CHM)*
 
 ![Sensitivity analysis](results/sensitivity_analysis.png)
 
@@ -111,7 +111,7 @@ All scripts are in `code/`:
 
 ![CloudCompare visualization of the disturbance edge](results/capture.png)
 
-*Rendered CloudCompare screenshot of the disturbance edge extract (height-colored, SSAO shading), showing the structural contrast between healthy canopy and the disturbed area at ground level.*
+*Rendered CloudCompare screenshot of the disturbance edge extract (height-colored, SSAO shading), showing the structural contrast between healthy canopy and the disturbed area at ground level*
 
 Other files in `results/` (not directly renderable on GitHub):
 - `chm_moehnesee.tif`, `chm_smoothed_moehnesee.tif:` canopy height model
