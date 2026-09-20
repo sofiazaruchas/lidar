@@ -160,3 +160,4 @@ freq_table$percent <- 100 * freq_table$count / sum(freq_table$count)
 print(freq_table)
 
 write.csv(freq_table, "results/disturbance_area_statistics.csv", row.names = FALSE)
+
