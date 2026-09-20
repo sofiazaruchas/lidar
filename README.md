@@ -107,17 +107,17 @@ All scripts are in `code/`:
 
 ![Sensitivity analysis](results/sensitivity_analysis.png)
 
-*Threshold sensitivity analysis (shared y-axis).*
+*Threshold sensitivity analysis*
 
 ![CloudCompare visualization of the disturbance edge](results/capture.png)
 
 *Rendered CloudCompare screenshot of the disturbance edge extract (height-colored, SSAO shading), showing the structural contrast between healthy canopy and the disturbed area at ground level.*
 
 Other files in `results/` (not directly renderable on GitHub):
-- `chm_moehnesee.tif`, `chm_smoothed_moehnesee.tif` – canopy height model
-- `aba_metrics_moehnesee.tif` – area-based height metrics (36 layers)
-- `disturbance_area_statistics.csv` – area statistics
-- `showcase_disturbance_edge.laz` – ALS point cloud extract used for the CloudCompare screenshot above
+- `chm_moehnesee.tif`, `chm_smoothed_moehnesee.tif:` canopy height model
+- `aba_metrics_moehnesee.tif:` area-based height metrics (36 layers)
+- `disturbance_area_statistics.csv:` area statistics
+- `showcase_disturbance_edge.laz:` ALS point cloud extract used for the CloudCompare screenshot above
 
 
 ## Sources (storm/beetle damage context, NRW)
