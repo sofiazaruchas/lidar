@@ -98,6 +98,9 @@ plot(combined,
      plg = list(cex = 0.8))
 dev.off()
 
+#saving
+writeRaster(combined, "results/combined_disturbance.tif", overwrite = TRUE)
+
 #sensitivity analysis
 total_valid <- sum(!is.na(values(ndvi_diff)))
 
