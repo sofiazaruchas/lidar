@@ -2,6 +2,9 @@ library(sf)
 library(lidR)
 library(terra)
 
+#load combined raster
+combined <- rast("results/combined_disturbance.tif")
+
 #find coordinates for visualisation in cloud compare
 confirmed <- combined == 3
 healthy   <- combined == 0
