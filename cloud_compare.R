@@ -1,6 +1,7 @@
 library(sf)
 library(lidR)
 library(terra)
+library(magick)
 
 #load combined raster
 combined <- rast("results/combined_disturbance.tif")
@@ -53,3 +54,7 @@ subset <- clip_rectangle(ctg_norm2,
 )
 
 writeLAS(subset, "results/showcase_disturbance_edge.laz")
+
+#convert image bmp into png
+img <- image_read("results/capture.bmp")
+image_write(img, "results/capture.png", format = "png")
